@@ -25,5 +25,6 @@ body{
     border: 1px solid black;
 
     /* na position, o sticky e o dependem da classe pai, ja os outros podem
-    se mexer tranquilamente, independente da sua dependência */
+    se mexer tranquilamente, independente da sua dependência
+     */
 }
