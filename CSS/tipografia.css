@@ -1,0 +1,26 @@
+body {
+    background-color: dimgrey;
+    margin: 0px;
+    padding: 10vh;
+    width: 10vh;
+    margin-top: 20px;
+
+}
+
+
+.paragrafo {
+    font-size: 200%;  /*a quantidade de pixels de monitor para monitor, vai variar
+                        por isso é interessante utilizar o %, rem ou em*/
+    width: 600px;
+    margin: 20px;
+    padding: 10px;
+    font-family: 'Pixelify Sans', sans-serif;
+    background-color: darkgrey;
+    color: slateblue;
+    font-style: italic;
+    text-transform: full-width; /*utilizado para manter a formatação de lingauas estrangeiras*/
+    text-decoration: solid; /*para colocar mais propriedades é so adicionar ao lado, sem virgula*/
+    text-shadow: 3px 1px 1px black , 4px 1px 3px red;
+    text-align: center;
+
+}
