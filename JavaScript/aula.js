@@ -41,34 +41,39 @@ main();
 console.log(valor3);
 */
 
-const euclido = 1;
+// const euclido = 1;
 
-function main() {
-    // // if(euclido >2 && euclido < 5) {
-    // //     console.log('TA ERRADO');
-    // // }
+// function main() {
+//     // // if(euclido >2 && euclido < 5) {
+//     // //     console.log('TA ERRADO');
+//     // // }
 
-    // //para comentar várias linhas de uma vez a gente seleciona, clica ctrl k + ctrl c
+//     // //para comentar várias linhas de uma vez a gente seleciona, clica ctrl k + ctrl c
 
-    // const numero = 1;
-    // numero++;
-    // numer' '
+//     // const numero = 1;
+//     // numero++;
+//     // numer' '
 
-    // && -> e
-    // || -> ou 
+//     // && -> e
+//     // || -> ou 
 
-    // ! -> negação
+//     // ! -> negação
 
-    // = -> atribuição
-    // == -> verifica a tipagem
-    // === -> verifica a tipagem e a referência
+//     // = -> atribuição
+//     // == -> verifica a tipagem
+//     // === -> verifica a tipagem e a referência
 
 
-    const verdadeiro = 'banana';
-    if (!verdadeiro == 'banana'){
-        console.log('VERDADEIRO');
-    } else {
-        console.log('FALSO');
-    }
-}
-    main();
+// //     const verdadeiro = 'banana';
+// //     if (!verdadeiro == 'banana'){
+// //         console.log('VERDADEIRO');
+// //     } else {
+// //         console.log('FALSO');
+// //     }
+// // }
+// //     main();
+
+
+let nome = 'vinicius';
+console.log (nome.toLocaleLowerCase);
+console.log (nome.toUpperCase);
