@@ -1,4 +1,4 @@
-// objeto -> 
+// objeto -> caracterizado por duas coisas : chave e valor 
 const Pessoa = {
     nome: 'Lívia',
 };
