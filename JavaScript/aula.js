@@ -144,7 +144,7 @@ let array = [
     },
 ];
 
-// o map funciona como se fosse um for, ele vai percorrer por todo o array e vai ferificar cada objeto e executar a função desejada.
+// o map funciona como se fosse um for, ele vai percorrer por todo o array e vai verificar cada objeto e executar a função desejada.
 const resultado = array.map((resposta) => {
     if (resposta.name == 'John'){
         resposta.age = resposta.age + 10;
