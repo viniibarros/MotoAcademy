@@ -12,7 +12,7 @@ console.log(lista.length);  // tamanho da lista
 lista.push(22);     //adicionando um item a lista
 console.log(lista);
 
-console.log(lista.pop());       // erxcluindo o último item da lista 
+console.log(lista.pop());       // excluindo o último item da lista 
 console.log(lista);
 
 lista[2] = "pedro";     //substituindo um item
@@ -20,3 +20,13 @@ console.log(lista);
 
 lista.splice(1,9,9,9,9);      // é como se fosse um combo, consegue adicionar, remover e substituir, mas é necessario estudar os parametros 
 console.log(lista);
+
+
+
+
+
+
+
+
+
+
