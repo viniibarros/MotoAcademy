@@ -6,7 +6,6 @@ import { MeuComponenteComponent } from './meu-componente/meu-componente.componen
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MeuComponenteComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
