@@ -1,6 +1,7 @@
 const express = require ('express');
 const router = express.Router()
 const db = require('./db');
+const ValidatorMiddleware = require('./middlewares/validatorMiddleware')
 
 // Endpoint de Leitura de Alunos (Read)
 
@@ -16,11 +17,10 @@ router.get("/alunos", (req,res) =>{
     });
 });
 
-    
 
 // Endpoint de Criação de Aluno (Create)
 
-router.post("/alunos", (req, res) => {
+router.post('/alunos', ValidatorMiddleware.validateInput, (req, res) => {
     const{nome, idade} = req.body;
 
     const query = `INSERT INTO alunos (nome, idade) VALUES ('${nome}',${idade})`;
@@ -53,7 +53,9 @@ router.put("/alunos/:id", (req, res) => {
     });
 });
 
+
 //Endpoint de Exclusão de Aluno (Delete)
+
 router.delete("/alunos/:id", (req, res) => {
     const {id} = req.params;
 
@@ -67,6 +69,10 @@ router.delete("/alunos/:id", (req, res) => {
         }
     });
 });
+
+
+
+
 
 
 // ------------------------------------------------------ AULAS ------------------------------------------------------
@@ -87,7 +93,6 @@ router.get("/aulas", (req, res) => {
 
 
 
-
 // Endpoint de Criação de Aula (Create)
 
 router.post("/aulas", (req,res) =>{
@@ -104,7 +109,6 @@ router.post("/aulas", (req,res) =>{
 });
 
     
-
 
 //Endpoint de Atualização de Aula (Update)
 
@@ -123,6 +127,8 @@ router.put("/aulas/:id", (req, res) => {
         }               //LEMBRANDO QUE TÁ DANDO ERRO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     });
 });
+
+
 
 //Endpoint de Exclusão de Aula (Delete)
 router.delete("/aulas/:id", (req, res) => {
