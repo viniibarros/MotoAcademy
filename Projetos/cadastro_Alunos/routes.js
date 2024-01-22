@@ -20,7 +20,7 @@ router.get("/alunos", (req,res) =>{
 
 // Endpoint de Criação de Aluno (Create)
 
-router.post('/alunos', ValidatorMiddleware.validateInput, (req, res) => {
+router.post('/alunos', (req, res) => {
     const{nome, idade} = req.body;
 
     const query = `INSERT INTO alunos (nome, idade) VALUES ('${nome}',${idade})`;
