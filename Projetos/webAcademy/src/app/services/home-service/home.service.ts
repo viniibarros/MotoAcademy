@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
+import { error } from 'console';
 import { Observable } from 'rxjs';
+import { Alunos } from 'src/app/interfaces/alunos-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -16,15 +18,28 @@ export class HomeService {
     }
 
     return new Observable((observer) => {
-      axios.get(this.api,{headers})
-        .then((response) => {
+      axios.get(this.api+"/alunos")
+        .then((response) => {       //casos de sucesso
           observer.next(response.data);
           observer.complete()
         })
-        .catch((error) => {
+        .catch((error) => {       //casos de erro
           observer.error(error);
         })
     })
   }
 
+  insertAlunos(data:Alunos): Observable<any> {
+    return new Observable((observer) =>{
+      axios.post(this.api+"/alunos", data)
+        .then((response) =>{
+          observer.next(response.data)
+          observer.complete()
+
+        })
+        .catch((error)=> {
+          observer.error(error);
+        })
+    })
+  }
 }

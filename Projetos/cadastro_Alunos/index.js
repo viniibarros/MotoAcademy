@@ -2,11 +2,14 @@
 const express = require('express');
 const db = require('./db');
 const bodyParser = require('body-parser');
+const cors = require('cors')
 
 const app = express();
 const port = 3000;
 
-app.use(bodyParser.json());
+app.use(bodyParser.json()); // é como se fosse uma formatação de como será enviado ou recebido o arquivo, no caso o JSON)
+
+app.use(cors())
 
 const routes = require('./routes')
 
