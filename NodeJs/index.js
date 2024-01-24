@@ -67,7 +67,7 @@ app.put('/users/:id',(req,res)=>{
     userIndex = users.findIndex(user => user.id === id);
 
     if(userindex !== -1) {
-        users[userIndex].name = name;
+        users[userIndex]= name;
         res.json(users[userIndex])
     }
     else{
